@@ -6,7 +6,7 @@ app.set('view engine','ejs');
 
 
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+app.use(express.static(__dirname+"/public"));
 mongoose.connect("mongodb+srv://tododb123:todo123@cluster0.dg6mloo.mongodb.net/todolist");
 
 const itemsSchema = {
