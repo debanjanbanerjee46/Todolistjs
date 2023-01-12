@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+      
+        <img class="ham" id="ham3"src="ham.png" alt="" width="30">
+          
+        <div class="taskbar">
+          <nav><ul>
+            <li ><a href="/">Today</a></li>
+            <li ><a href="/impl">Important</a></li>
+            <li ><a href="/cmplt">Completed</a></li>
+            <li><a href="/all">All Tasks</a></li>
+          </ul></nav>
+        </div>
+        <div class="rem" id="cmp">
+          
+          <div class="taskf">
+            <ul class="ul1">
+              <div class="heading">
+                <img src="cmplt.png" width="35"alt="">
+                <span>Completed</span>
+               
+              </div>
+              <% completeditems.forEach(function(item){ %>
+                <li class="li1"> 
+                  <span class="del3" ><%= item.name %></span> 
+                  <span class="due"> completed on: <%= item.date %></span>
+                  <form action="/cmpldelete" class="del2" method="post">
+                    <button type="submit" value="<%=item.id%>" name="delete2"><img src="del.png" alt="" width="30"></button>
+                  </form>
+                  
+                  
+                </li>
+                <% }) %>
+            </ul>
+          </div>
+         </div>
+
+        
+         
+          
+         </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>

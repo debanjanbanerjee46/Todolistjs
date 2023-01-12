@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+      <img class="ham" id="ham3"src="ham.png" alt="" width="30">
+        <div class="taskbar">
+          <nav><ul>
+            <li ><a href="/">Today</a></li>
+            <li ><a href="/impl">Important</a></li>
+            <li ><a href="/cmplt">Completed</a></li>
+            <li><a href="/all">All Tasks</a></li>
+          </ul></nav>
+        </div>
+        <div class="rem" id="content">
+          <div class="today">
+           <span class="date" id="month">My Day</span>
+           <span class="date" id="whole"></span>
+          </div>
+          
+          <% if(newlistitems.length!=0||importentitems.length!=0){ %>
+            <div class="taskf">
+              <ul class="ul1">
+                <% importentitems.forEach(function(item){ %>
+                  <li class="li1">
+                    
+                    <form action="/cmpl24" class="del" method="post">
+                      <input type="checkbox" onChange="this.form.submit()" value="<%=item.id%>" name="cmp">
+                    </form>
+                    <span class="del3" ><%= item.name %></span>
+                    <span class="due"> Do before: <%= item.time %></span>
+                    <form action="/delimp" class="del2" method="post">
+                      <button type="submit"  value="<%=item.id %>" name="delimp"><img src="fav.png" alt="" width="30"></button>
+                    </form> 
+                    <form action="/delete2" class="del2" method="post">
+                      <button type="submit" value="<%=item.id%>" name="delete"><img src="del.png" alt="" width="30"></button>
+                    </form>
+                    
+                  </li>
+                  <% }) %>
+                                   
+                                      
+                <% newlistitems.forEach(function(item){ %>
+                  <li class="li1">
+              
+                    <form action="/cmpl" class="del" method="post">
+                      <input type="checkbox" onChange="this.form.submit()" value="<%=item.id%>" name="cmp">
+                    </form>
+                    <span class="del3" ><%= item.name %></span> 
+                    <span class="due"> Do before: <%= item.time %></span>
+                    <form action="/imp" class="del2" method="post">
+                      <button type="submit"  value="<%=item.id %>" name="imp"><img src="unfav.png" alt="" width="30"></button>
+                    </form>
+
+                    <form action="/delete" class="del2" method="post">
+                      <button type="submit" value="<%=item.id%>" name="delete"><img src="del.png" alt="" width="30"></button>
+                    </form>
+                    
+                    
+                  </li>
+                  <% }) %>
+              </ul>
+            </div>
+           <% } %>
+           <% if(newlistitems.length==0 && importentitems.length==0) { %>
+            <div class="taske">
+              <h1>Noo task Today</h1>
+              <h2>Enjoy Your day or you are here to add some</h2>
+            </div>
+           <% } %>
+          <div class="addtsk">
+            <form class="add"action="/"method="post">
+              <input type="text" class="tsk6" name="newtask" required placeholder="Add Task">
+              <input type="time" class="date2" name="time">
+              <button class="" type="submit" name="button"><img src="add.png" alt="" width="30"></button>
+              
+            </form>
+          </div>
+       </div>
+        
+        
+         
+          <div id="tsk"></div>
+          <div id="imp"></div>
+         </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>

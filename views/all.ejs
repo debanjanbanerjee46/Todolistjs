@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+      
+        <img class="ham" id="ham3"src="ham.png" alt="" width="30">
+         
+        <div class="taskbar">
+          <nav><ul>
+            <li ><a href="/">Today</a></li>
+            <li ><a href="/impl">Important</a></li>
+            <li ><a href="/cmplt">Completed</a></li>
+            <li><a href="/all">All Tasks</a></li>
+          </ul></nav>
+        </div>
+        <div class="rem" id="all">
+          
+            
+            
+            <div class="taskf">
+              <ul class="ul1">
+                <div class="heading">
+                  <img src="task.png" width="35"alt="">
+                  <span>All Task</span>
+                 
+                </div>
+                <% alimportentitems.forEach(function(item){ %>
+                    <li class="li1">
+                      
+                      <form action="/alcmpl" class="del" method="post">
+                        <input type="checkbox" onChange="this.form.submit()" value="<%=item.id%>" name="cmp">
+                      </form>
+                      <span class="del3" ><%= item.name %></span>
+                      <span class="due"> Due on: <%= item.date %></span>
+                      <form action="/aldelimp" class="del2" method="post">
+                        <button type="submit"  value="<%=item.id %>" name="delimp"><img src="fav.png" alt="" width="30"></button>
+                      </form> 
+                      <form action="/aldeleteimp" class="del2" method="post">
+                        <button type="submit" value="<%=item.id%>" name="delete"><img src="del.png" alt="" width="30"></button>
+                      </form>
+                      
+                      
+                    </li>
+                    <% }) %>
+                <% allitems.forEach(function(item){ %>
+                  <li class="li1"> 
+                    
+                    
+                    <form action="/alcmpl" class="del" method="post">
+                      <input type="checkbox" onChange="this.form.submit()" value="<%=item.id%>" name="cmp">
+                    </form><span class="del3" ><%= item.name %></span>
+                    
+                    <span class="due"> Due on: <%= item.date %></span>
+                    <form action="/alimp" class="del2" method="post">
+                        <button type="submit"  value="<%=item.id %>" name="imp"><img src="unfav.png" alt="" width="30"></button>
+                      </form> 
+                    <form action="/aldelete" class="del2" method="post">
+                      <button type="submit" value="<%=item.id%>" name="delete"><img src="del.png" alt="" width="30"></button>
+                    </form>
+                    
+                    
+                  </li>
+                  <% }) %>
+              </ul>
+            </div>
+            <div class="addtsk">
+              <form class="add"action="/all"method="post">
+                <input type="text" class="tsk7" name="newtask" required placeholder="Add Task">
+                <input type="date" class="date3" name="date">
+                <input type="time" class="date4" name="time">
+                <button class="" type="submit" name="button"><img src="add.png" alt="" width="30"></button>
+                
+              </form>
+            </div>
+           </div>
+        
+         
+          <div id="tsk"></div>
+          <div id="imp"></div>
+         </div>
+     </div>
+    <script src="script2.js"></script>
+</body>
+</html>

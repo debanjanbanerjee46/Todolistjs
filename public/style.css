@@ -1,0 +1,429 @@
+*{
+    margin:  0;
+    padding:  0;
+    
+}
+.main{
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+    
+    
+    
+}
+.taskbar{
+    
+    background: #000c;
+    min-width:18vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px;
+    border-color: aliceblue;
+    align-items: center;
+    overflow: hidden;
+    
+    
+    
+    
+}
+#content
+{
+   min-width: 82vw;
+    
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    background-image:url("green_mountain_nature_wallpaper_hd.jpg");
+    
+    width: 100%;
+    
+}
+
+.taskf{
+    display: flex;
+    align-self: start;
+    justify-self: first baseline;
+    width: 100%;
+    max-height: 66%;
+   
+}
+.ul1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px  49px;
+    overflow-y: scroll;
+
+
+   
+    
+}
+.ul1::-webkit-scrollbar {
+    display: none;
+}
+.li1{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    background-color:rgb(43 45 46 / 89%);
+    margin:4px 0px;
+    align-items: center;
+    border-radius: 14px;
+   
+    
+    
+}
+.del{
+
+justify-self: center;
+}
+.addtsk{
+    
+    align-self: center;
+    
+   
+    margin-bottom: 35px;
+    
+    display: flex;
+   
+    position: absolute;
+   bottom: 0px;
+width: -webkit-fill-available;
+}
+
+.del{
+    justify-self:flex-start;
+    margin: 12px 15px;
+    
+
+   
+}
+.del3::-webkit-scrollbar {
+    
+    display: none;
+}
+.taske{
+align-self: center;
+justify-self: center;
+display :flex;
+align-items: center;
+margin: auto;
+flex-direction: column;
+background-color: rgba(1, 4, 6, 0.666);
+color: aliceblue;
+border-radius: 20px;
+}
+
+.taske h2{
+    padding: 20px 20px;
+}
+.taske h1{
+    padding-top:20px ;
+
+}
+.del2{
+    display: flex;
+    margin: 12px 15px;
+    
+    
+    
+}
+.del3{
+    
+    margin: 10px 1%;
+    color: aliceblue;
+    width: 60%;
+    font-size: 25px;
+    overflow-x: scroll;
+    padding-left: 12px;
+   
+}
+.due{
+    width:30%;
+    color: aliceblue;
+    font-size: 25px;
+}
+.today{
+    margin: 5% 8%;
+    margin-top: 35px;
+    display: flex;
+   flex-direction: column;
+   width:30%;
+   background-color: rgba(20, 6, 6, 0.601);
+   color:aliceblue;
+   padding: 20px 20px;
+   border-radius: 20px;
+   
+    
+}
+.date{
+    display: flex;
+    
+    justify-content: center;
+    font-size: 25px;
+}
+.add input[type=text]{
+    width: 20%;
+    width: 90%;
+    justify-content: center;
+    height: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 20px;
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: rgba(16, 16, 16, 0.773);
+    
+}
+.add{
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    background-color: rgb(43 45 46);
+    margin: 0 49px;
+    border-radius: 20px;
+    height: 49px;
+    
+    
+}
+.add button{
+    margin: 0 auto;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 10%;
+    
+    box-sizing: border-box;
+    
+}
+.del input{
+    border-radius: 49px;
+}
+.del2 button{
+    background-color: transparent;
+    border-color: transparent;
+}
+.taskbar nav ul li{
+    color: antiquewhite;
+    text-decoration:none;
+    list-style: none;
+    font-size: 25px;
+    text-decoration: none;
+}
+.taskbar nav ul li a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.taskbar nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    cursor: pointer;
+    
+
+}
+.taskbar nav{
+    height: 100%;
+}
+#cmp{
+    min-width:82vw;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.871);
+    margin: 0;
+    padding: 0%;
+    
+    
+    
+}
+#heading{
+    color: rgba(244, 79, 159, 0.834);
+    background-color: transparent;
+    padding: 0;
+    margin: 0%;
+}
+#cmpl1{
+    background-color: transparent;
+    
+}
+
+.date2:focus{
+    border-width: 0px;
+    background-color: transparent;
+}
+#all{
+    min-width:82vw;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.871);
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    
+    
+}
+.date2{
+    color: rgba(250, 235, 215, 0.334);
+    display: flex;
+    padding: auto;
+    justify-content: center;
+    align-items: center;
+    width:10%;
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+}
+.date3{
+    color: rgba(250, 235, 215, 0.334);
+    display: flex;
+    padding: auto;
+    justify-content: center;
+    align-items: center;
+    width:10%;
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+}
+.date4{
+    color: rgba(250, 235, 215, 0.334);
+    display: flex;
+    padding: auto;
+    justify-content: center;
+    align-items: center;
+    width:10%;
+    background-color: transparent;
+    border-color: transparent;
+    display: none;
+}
+
+.add:hover{
+    background-color: rgb(83 85 86);
+}
+.add:focus{
+    background-color: rgb(83 85 86);
+    
+}
+#important{
+    min-width:82vw;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.871);
+    margin: 0;
+    padding: 0%;
+}
+.heading span{
+    color: aliceblue;
+    font-size: 30px;
+    color: rgba(244, 79, 159, 0.834);
+    background-color: transparent;
+    padding: 0;
+    margin: 0%;
+    
+}
+.heading img{
+    margin:0 5px;
+    position: relative;
+    top: 20%;
+}
+.heading{
+    margin: 50px 10px;
+}
+.taske{
+    transform: translatey(-9vh);
+
+}
+.ham{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    padding: 15px 20px;
+    cursor: pointer;
+    display:none;
+    z-index: 2;
+}
+.taskbargo{
+    
+       position: fixed;
+       background: #000c;
+    min-width:18vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px;
+    border-color: aliceblue;
+    align-items: center;
+    overflow: hidden;
+   
+
+}
+
+@media screen and (max-width: 1291px) {
+    .taskbar{
+        transition:transform 0.5s ease-in-out;
+       position: fixed;
+       transform: translateX(-100vw);
+       width: 100vw;
+       
+       
+       
+    }
+    .taskbargo{transition:transform 0.5s ease-in-out;
+    transform: translateX(0vw);
+       position: fixed;
+    width:100vw;
+    z-index: 1;
+    background: rgb(29, 29, 29)
+}
+    .ham{transition:transform 0.5s ease;
+        display: inline;
+        
+    }
+    .hamgo{
+        transition:transform 0.5s ease;
+        transform: rotate(90deg);
+    }
+    #all{
+        width: 100%;
+    }
+    #content{
+        width: 100%;
+    }
+    #imp{
+        width: 100%;
+    }
+    .main{
+        display: inline;
+    }
+    .taske{
+        width:80%;
+        
+
+     }
+     .add input[type=text]{
+        width:70%;
+     }
+     .today{
+        margin-top:  50px;
+        margin-left: 50px; 
+     }
+    }
+    @media screen and (max-width: 691px) {
+        .del3{
+            font-size: 20px;
+        }
+        .due{
+            font-size: 20px;
+        }
+    }

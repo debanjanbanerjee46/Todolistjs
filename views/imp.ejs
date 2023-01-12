@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+      
+        <img class="ham" id="ham3"src="ham.png" alt="" width="30">
+          
+        <div class="taskbar">
+          <nav><ul>
+            <li ><a href="/">Today</a></li>
+            <li ><a href="/impl">Important</a></li>
+            <li ><a href="/cmplt">Completed</a></li>
+            <li><a href="/all">All Tasks</a></li>
+          </ul></nav>
+        </div>
+        <div class="rem" id="all">
+            
+            
+            
+              <div class="taskf">
+                <ul class="ul1">
+                  <div class="heading">
+                    <img src="imp.png" width="35"alt="">
+                    <span>Important</span>
+                   
+                  </div>
+                  <% importentitems.forEach(function(item){ %>
+                    <li class="li1">
+                      
+                      <form action="/cmpl" class="del" method="post">
+                        <input type="checkbox" onChange="this.form.submit()" value="<%=item.id%>" name="cmp">
+                      </form>
+                      <span class="del3" ><%= item.name %></span>
+                      <span class="due"> Due on: <%= item.date %></span>
+                      <form action="/delimp2" class="del2" method="post">
+                        <button type="submit"  value="<%=item.id %>" name="delimp"><img src="fav.png" alt="" width="30"></button>
+                      </form> 
+                     
+                      
+                      
+                    </li>
+                    <% }) %>
+                    
+                      
+                     
+                      
+                 
+                </ul>
+              </div>
+        
+        
+         
+          
+         </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>
