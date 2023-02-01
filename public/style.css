@@ -369,7 +369,7 @@ border-radius: 20px;
 
 }
 
-@media screen and (max-width: 1291px) {
+@media screen and (max-width: 991px) {
     .taskbar{
         transition:transform 0.5s ease-in-out;
        position: fixed;
