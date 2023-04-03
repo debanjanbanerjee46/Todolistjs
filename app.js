@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const bodyParser=require("body-parser");
@@ -7,7 +8,7 @@ app.set('view engine','ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname+"/public"));
-mongoose.connect("mongodb+srv://tododb123:todo123@cluster0.dg6mloo.mongodb.net/todolist");
+mongoose.connect(process.env.API_KEY);
 
 const itemsSchema = {
     name:String,
@@ -484,7 +485,7 @@ app.post("/alcmpl",function(req,res){
 
 })
 
-app.listen(3000, function(){
+app.listen(process.env.PORT||3000, function(){
     console.log("304");
     
     
