@@ -8,6 +8,7 @@ app.set('view engine','ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname+"/public"));
+mongoose.set('strictQuery',false);
 mongoose.connect(process.env.API_KEY);
 
 const itemsSchema = {
